@@ -1,0 +1,99 @@
+.features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: @bg-grey;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.features__block {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    margin-top: 45px;
+    padding: 0 20px;
+}
+
+.features__item {
+    padding: 10px;
+    padding-top: 70px;
+    text-align: center;
+    position: relative;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-33px);
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        display: block;
+        width: 67px;
+        height: 67px;
+    }
+}
+
+.features__item:first-child::before {
+    background-position: -306px -5px;
+}
+
+.features__item:nth-child(2)::before {
+    background-position: -5px -5px;
+}
+
+.features__item:last-child::before {
+    background-position: -148px -5px;
+}
+
+//-------------DESKTOP----------
+
+@media @desktop {
+    .features {
+        padding-top: 130px;
+        min-height: 675px;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 110px;
+            background-image: url(../img/pen-holder.png);
+            background-repeat: no-repeat;
+            width: 270px;
+            height: 350px;
+        }
+        
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 150px;
+            background-image: url(../img/earphones.png);
+            background-repeat: no-repeat;
+            width: 162px;
+            height: 215px;
+        }
+    }
+    
+    .features__item {
+        max-width: 370px;
+    }
+    
+    .features__block::after {
+        content: "";
+        position: absolute;
+        bottom: -90px;
+        right: -20px;
+        background-image: url(../img/cup.png);
+        background-repeat: no-repeat;
+        width: 153px;
+        height: 114px;
+    }
+}

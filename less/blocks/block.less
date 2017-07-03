@@ -1,0 +1,54 @@
+.block {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.block__label {
+    color: @red;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.block__h2 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    margin-top: 0;
+    
+    span {
+        color: @red;
+    }
+}
+
+.block__text {
+    margin-top: 0;
+}
+
+//-------------TABLET-------------
+
+@media @tablet {
+    
+}
+
+//------------DESKTOP-------------
+
+@media @desktop {
+    .block {
+        max-width: 870px;
+        padding: 0 140px;
+        
+        &--mg {
+            padding-top: 180px;;
+        }
+    }
+    
+    .block__h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
